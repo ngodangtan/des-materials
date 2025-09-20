@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373BB8F42E7E62130048E263 /* AppDelegateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373BB8F32E7E62120048E263 /* AppDelegateRouter.swift */; };
 		428EF7AC21337A3400E953CF /* PainLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EF7AB21337A3400E953CF /* PainLevelViewController.swift */; };
 		428EF7AE21337BCB00E953CF /* PainLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EF7AD21337BCB00E953CF /* PainLevel.swift */; };
 		428EF7B021337BD400E953CF /* VisitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EF7AF21337BD400E953CF /* VisitType.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373BB8F32E7E62120048E263 /* AppDelegateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateRouter.swift; sourceTree = "<group>"; };
 		428EF7AB21337A3400E953CF /* PainLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelViewController.swift; sourceTree = "<group>"; };
 		428EF7AD21337BCB00E953CF /* PainLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevel.swift; sourceTree = "<group>"; };
 		428EF7AF21337BD400E953CF /* VisitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitType.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		428EF7CE2134743A00E953CF /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				373BB8F32E7E62120048E263 /* AppDelegateRouter.swift */,
 				428EF7C7213471F100E953CF /* Router.swift */,
 			);
 			path = Routers;
@@ -297,8 +300,9 @@
 		42EA90DA212EF07300D01406 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 2600;
 				ORGANIZATIONNAME = "Razeware, LLC";
 				TargetAttributes = {
 					42EA90E1212EF07300D01406 = {
@@ -354,6 +358,7 @@
 				42CF673B2138646900279A2A /* FakingItViewController.swift in Sources */,
 				428EF7D1213474BA00E953CF /* HomeViewController.swift in Sources */,
 				42EA90E6212EF07300D01406 /* AppDelegate.swift in Sources */,
+				373BB8F42E7E62130048E263 /* AppDelegateRouter.swift in Sources */,
 				428EF7B021337BD400E953CF /* VisitType.swift in Sources */,
 				42D47CB5212EFEC90057AC9B /* SelectPainLevelViewController.swift in Sources */,
 				428EF7E02135884000E953CF /* NoAppointmentRequiredViewController.swift in Sources */,
@@ -392,6 +397,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -403,6 +409,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -422,6 +429,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -453,6 +461,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -464,6 +473,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -476,6 +486,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
