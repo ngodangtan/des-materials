@@ -29,7 +29,7 @@
 import UIKit
 
 // MARK: - StartOverViewControllerDelegate
-public protocol StartOverViewControllerDelegate: class {
+public protocol StartOverViewControllerDelegate: AnyObject {
   func startOverViewControllerDidPressStartOver(_ controller: StartOverViewController)
 }
 

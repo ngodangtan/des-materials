@@ -26,3 +26,47 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import UIKit
+
+public protocol Router: AnyObject {
+    func present(
+        _ viewController: UIViewController,
+        animated: Bool)
+    
+    func present(
+        _ viewController: UIViewController,
+        animated: Bool,
+        onDismissed: (()->Void)?)
+    
+    func dismiss(animated: Bool)
+}
+
+extension Router {
+    public func present(
+        _ viewController: UIViewController,
+        animated: Bool) {
+            present(
+                viewController,
+                animated: animated,
+                onDismissed: nil
+            )
+        }
+}
+ //Protocol Router chỉ mô tả hợp đồng: “phải có present, dismiss…”.
+// Nhưng protocol không có cách làm → ta cần class/struct concrete implement.
+// -> Check file NavigationRouter
+/*
+ Ý nghĩa:
+
+ Có thể có nhiều loại Router khác nhau:
+
+ NavigationRouter → dùng UINavigationController.
+
+ ModalRouter → dùng present/dismiss.
+
+ AppDelegateRouter → set root window.
+
+ Coordinator không biết và không quan tâm loại nào → nó chỉ gọi router.present(vc).
+
+ Lợi ích: tách hẳn “cách chuyển màn hình” ra module riêng, có thể thay đổi dễ dàng.
+ */

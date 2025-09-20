@@ -19,3 +19,19 @@
  
  ## Code Example
  */
+import PlaygroundSupport
+import UIKit
+// 1
+let homeViewController = HomeViewController.instantiate()
+let navigationController =
+UINavigationController(rootViewController: homeViewController)
+// 2
+let router = NavigationRouter(navigationController:
+                                navigationController)
+let coordinator = HowToCodeCoordinator(router: router)
+// 3
+homeViewController.onButtonPressed = { [weak coordinator] in
+    coordinator?.present(animated: true, onDismissed: nil)
+}
+// 4
+PlaygroundPage.current.liveView = navigationController
