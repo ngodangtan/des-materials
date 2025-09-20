@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37F96BD32E7EB01B00A817FE /* YLPClient+BusinessSearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F96BD22E7EB01500A817FE /* YLPClient+BusinessSearchClient.swift */; };
+		37F96BD72E7EB04200A817FE /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F96BD62E7EB03D00A817FE /* Business.swift */; };
+		37F96BD92E7EB04E00A817FE /* BussinessSearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F96BD82E7EB04700A817FE /* BussinessSearchClient.swift */; };
 		4252EAAA2023E05900847430 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4252EAA92023E05900847430 /* APIKeys.swift */; };
 		C319A8C12025B586003322C0 /* AnnotationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319A8C02025B586003322C0 /* AnnotationFactory.swift */; };
 		C35933852023BF5700D85500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35933842023BF5700D85500 /* AppDelegate.swift */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		0EB69E332F1CF61F584429C4 /* Pods-CoffeeQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeQuest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeQuest/Pods-CoffeeQuest.release.xcconfig"; sourceTree = "<group>"; };
+		37F96BD22E7EB01500A817FE /* YLPClient+BusinessSearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YLPClient+BusinessSearchClient.swift"; sourceTree = "<group>"; };
+		37F96BD62E7EB03D00A817FE /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		37F96BD82E7EB04700A817FE /* BussinessSearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BussinessSearchClient.swift; sourceTree = "<group>"; };
 		4252EAA92023E05900847430 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		75B5478A401116797B732C06 /* Pods-CoffeeQuest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeQuest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeQuest/Pods-CoffeeQuest.debug.xcconfig"; sourceTree = "<group>"; };
 		C319A8C02025B586003322C0 /* AnnotationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationFactory.swift; sourceTree = "<group>"; };
@@ -46,6 +52,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37F96BD12E7EB00F00A817FE /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				37F96BD22E7EB01500A817FE /* YLPClient+BusinessSearchClient.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		37F96BD42E7EB02E00A817FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37F96BD62E7EB03D00A817FE /* Business.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		37F96BD52E7EB03700A817FE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				37F96BD82E7EB04700A817FE /* BussinessSearchClient.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		4252EAA42023DFE500847430 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +159,9 @@
 		C35933832023BF5700D85500 /* CoffeeQuest */ = {
 			isa = PBXGroup;
 			children = (
+				37F96BD52E7EB03700A817FE /* Protocols */,
+				37F96BD42E7EB02E00A817FE /* Models */,
+				37F96BD12E7EB00F00A817FE /* Adapter */,
 				4252EAA42023DFE500847430 /* AppDelegate */,
 				4252EAA52023DFE800847430 /* Controllers */,
 				C319A8BF2025B1E7003322C0 /* Factories */,
@@ -277,6 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37F96BD32E7EB01B00A817FE /* YLPClient+BusinessSearchClient.swift in Sources */,
+				37F96BD72E7EB04200A817FE /* Business.swift in Sources */,
+				37F96BD92E7EB04E00A817FE /* BussinessSearchClient.swift in Sources */,
 				C35933972023D71C00D85500 /* BusinessMapViewModel.swift in Sources */,
 				4252EAAA2023E05900847430 /* APIKeys.swift in Sources */,
 				C319A8C12025B586003322C0 /* AnnotationFactory.swift in Sources */,
@@ -427,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 957JYR79G5;
 				INFOPLIST_FILE = "$(SRCROOT)/CoffeeQuest/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.js.pancake.CoffeeQuest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,6 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 957JYR79G5;
 				INFOPLIST_FILE = "$(SRCROOT)/CoffeeQuest/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.js.pancake.CoffeeQuest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
