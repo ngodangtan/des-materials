@@ -17,3 +17,28 @@
  
  ## Code Example
  */
+/*
+ When should you use it?
+ Classes, modules, and functions can’t always be modified, especially if they’re from a
+ third-party library. Sometimes you have to adapt instead!
+ You can create an adapter either by extending an existing class, or creating a new
+ adapter class. This chapter will show you how to do both.
+ */
+
+import UIKit
+
+// MARK: - Example
+let viewController = LoginViewController.instance(with: GoogleAuthenticatorAdapter())
+viewController.emailTextField.text = "user@example.com"
+viewController.passwordTextField.text = "password"
+viewController.login()
+
+/*
+ The adapter pattern allows you to conform to a new protocol without changing an
+ underlying type. This has the consequence of protecting against future changes
+ against the underlying type, but it also makes your implementation harder to read
+ and maintain.
+ Be careful about implementing the adapter pattern unless you recognize there's a
+ real possibility for change. If there isn't, consider if it makes sense to use the
+ underlying type directly.
+ */
