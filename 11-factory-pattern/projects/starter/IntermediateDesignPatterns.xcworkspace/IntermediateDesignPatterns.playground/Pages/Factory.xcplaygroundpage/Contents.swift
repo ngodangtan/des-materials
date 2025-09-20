@@ -12,3 +12,19 @@
  
  ## Code Example
  */
+
+var jackson = JobApplicant(name: "Jackson Smith",
+                           email: "jackson.smith@example.com",
+                           status: .new)
+let emailFactory = EmailFactory(senderEmail: "RaysMinions@RaysCoffeeCo.com")
+// New
+// send email
+print(emailFactory.createEmail(to: jackson), "\n")
+// Interview
+jackson.status = .interview
+// send email
+print(emailFactory.createEmail(to: jackson), "\n")
+// Hired
+jackson.status = .hired
+// send email
+print(emailFactory.createEmail(to: jackson), "\n")
