@@ -15,3 +15,72 @@
  
  ## Code Example
  */
+/*
+ 1. State Pattern là gì?
+
+ Thuộc nhóm Behavioral Pattern.
+
+ Ý tưởng: thay vì nhồi nhét nhiều if / switch để xử lý trạng thái khác nhau, ta đóng gói từng trạng thái thành một object riêng, và cho context (đối tượng chính) ủy quyền hành vi cho state hiện tại.
+
+ 👉 Nói dễ hiểu:
+
+ Bạn có một cái máy (context).
+
+ Máy có nhiều trạng thái (state).
+
+ Ở mỗi trạng thái, hành vi của máy khác nhau.
+
+ Thay vì viết 1 class to đùng với nhiều if, ta chia nhỏ thành nhiều class “State” → code gọn, dễ mở rộng.
+
+ 2. Lợi ích của State Pattern
+
+ ✅ Loại bỏ if-else khổng lồ khi xử lý trạng thái.
+ ✅ Dễ mở rộng (chỉ cần thêm state mới).
+ ✅ Đóng gói hành vi theo từng trạng thái → dễ đọc, dễ bảo trì.
+ */
+
+protocol TrafficLightState {
+    func handle(context: TrafficLight)
+}
+
+class TrafficLight {
+    var state: TrafficLightState
+    
+    init(initial: TrafficLightState) {
+        self.state = initial
+    }
+    
+    func request() {
+        state.handle(context: self)
+    }
+}
+//
+class RedLight: TrafficLightState {
+    func handle(context: TrafficLight) {
+        print("🔴 Stop! Next → Green")
+        context.state = GreenLight()
+    }
+}
+
+class GreenLight: TrafficLightState {
+    func handle(context: TrafficLight) {
+        print("🟢 Go! Next → Yellow")
+        context.state = YellowLight()
+    }
+}
+
+class YellowLight: TrafficLightState {
+    func handle(context: TrafficLight) {
+        print("🟡 Caution! Next → Red")
+        context.state = RedLight()
+    }
+}
+
+// using
+let trafficLight = TrafficLight(initial: RedLight())
+
+trafficLight.request() // 🔴 Stop! Next → Green
+trafficLight.request() // 🟢 Go! Next → Yellow
+trafficLight.request() // 🟡 Caution! Next → Red
+trafficLight.request() // 🔴 Stop! Next → Green
+
