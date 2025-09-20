@@ -33,6 +33,7 @@ public class HowToCodeCoordinator: Coordinator {
     // 1
     public var children: [Coordinator] = []
     public let router: Router
+    
     // 2
     private lazy var stepViewControllers = [
         StepViewController.instantiate(
@@ -66,11 +67,13 @@ public class HowToCodeCoordinator: Coordinator {
     ]
     // 3
     private lazy var startOverViewController = StartOverViewController.instantiate(delegate: self)
+    
     // MARK: - Object Lifecycle
     // 4
     public init(router: Router) {
         self.router = router
     }
+    
     // MARK: - Coordinator
     // 5
     public func present(animated: Bool,

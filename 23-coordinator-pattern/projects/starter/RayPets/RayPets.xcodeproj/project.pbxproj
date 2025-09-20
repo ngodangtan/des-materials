@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373BB8F42E7E62130048E263 /* AppDelegateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373BB8F32E7E62120048E263 /* AppDelegateRouter.swift */; };
+		373BB8F62E7E63440048E263 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373BB8F52E7E633F0048E263 /* HomeCoordinator.swift */; };
 		428EF7AC21337A3400E953CF /* PainLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EF7AB21337A3400E953CF /* PainLevelViewController.swift */; };
 		428EF7AE21337BCB00E953CF /* PainLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EF7AD21337BCB00E953CF /* PainLevel.swift */; };
 		428EF7B021337BD400E953CF /* VisitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428EF7AF21337BD400E953CF /* VisitType.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		373BB8F32E7E62120048E263 /* AppDelegateRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateRouter.swift; sourceTree = "<group>"; };
+		373BB8F52E7E633F0048E263 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		428EF7AB21337A3400E953CF /* PainLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevelViewController.swift; sourceTree = "<group>"; };
 		428EF7AD21337BCB00E953CF /* PainLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainLevel.swift; sourceTree = "<group>"; };
 		428EF7AF21337BD400E953CF /* VisitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitType.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		42CF673421381E9500279A2A /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				373BB8F52E7E633F0048E263 /* HomeCoordinator.swift */,
 				428EF7B42133806C00E953CF /* Coordinator.swift */,
 			);
 			path = Coordinators;
@@ -353,6 +356,7 @@
 			files = (
 				428EF7AE21337BCB00E953CF /* PainLevel.swift in Sources */,
 				428EF7AC21337A3400E953CF /* PainLevelViewController.swift in Sources */,
+				373BB8F62E7E63440048E263 /* HomeCoordinator.swift in Sources */,
 				428EF7B52133806C00E953CF /* Coordinator.swift in Sources */,
 				428EF7C8213471F100E953CF /* Router.swift in Sources */,
 				42CF673B2138646900279A2A /* FakingItViewController.swift in Sources */,

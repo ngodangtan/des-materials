@@ -141,3 +141,6 @@ Tóm gọn: **Router “điều khiển CÁCH hiển thị view controller”, c
 Nếu bạn muốn, mình có thể dán đoạn **default implementation** ngắn của `dismiss` và `presentChild` từ chương này để thấy rõ “Coordinator gọi Router nhưng đồng thời quản lý children & onDismiss” (rất súc tích).
 
 
+// Summary
+// Step đầu tiên sẽ tạo protocol cho Router -> tạo concrete router class
+// next tạo protocol coordinator 
